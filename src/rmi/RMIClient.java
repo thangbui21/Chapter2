@@ -11,6 +11,11 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
+/**
+ * Quá trình hoạt động của RMI
+ * 
+ */
+
 
 /**
  *

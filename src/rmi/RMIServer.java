@@ -19,15 +19,17 @@ import java.util.ArrayList;
  * @author Thắng Bùi
  */
 public class RMIServer extends UnicastRemoteObject implements RMIInterface {
-
+    
+    // Khai báo thông tin.
     int thisPort = 3232;
     String thisAddress;
     Registry registry;
 
+    // Constructor 
     public RMIServer() throws RemoteException {
         try {
-            registry = LocateRegistry.createRegistry(thisPort);
-            registry.rebind("rmiServer", this);
+            registry = LocateRegistry.createRegistry(thisPort); // Đăng ký với Registry.
+            registry.rebind("rmiServer", this); // Registry bind lại RMIServer đặt tên là "rmiServer"
         } catch (RemoteException e) {
             System.out.println(e);
         }
